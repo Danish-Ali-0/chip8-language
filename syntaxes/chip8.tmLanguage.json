@@ -1,0 +1,119 @@
+{
+	"name": "Chip-8",
+	"scopeName": "source.chip8",
+	"fileTypes": [".ch8"],
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "opcodes"
+		},
+
+
+
+	  {
+		"name": "comment.line.chip8",
+		"match": ";.*$",
+		"captures": {
+		  "0": { "name": "punctuation.definition.comment.chip8" }
+		}
+	  },
+	  {
+		"name": "keyword.control.chip8",
+		"match": "\\b(00E0|00EE|0[0-9A-F]{3})\\b",
+		"captures": {
+		  "0": { "name": "keyword.control.chip8" }
+		}
+	  },
+	  {
+		"name": "entity.name.function.chip8",
+		"match": "\\b(1[0-9A-F]{3}|2[0-9A-F]{3}|B[0-9A-F]{3}|1224|1208)\\b",
+		"captures": {
+		  "0": { "name": "entity.name.function.chip8" }
+		}
+	  },
+	  {
+		"name": "constant.numeric.chip8",
+		"match": "\\b(A[0-9A-F]{3}|D[0-9A-F]{2}[0-9A-F]|A230|D128)\\b",
+		"captures": {
+		  "0": { "name": "constant.numeric.chip8" }
+		}
+	  },
+	  {
+		"name": "variable.parameter.chip8",
+		"match": "\\b(3[0-9A-F][0-9A-F]{2}|4[0-9A-F][0-9A-F]{2}|5[0-9A-F][0-9A-F]0|6[0-9A-F][0-9A-F]{2}|7[0-9A-F][0-9A-F]{2}|C[0-9A-F][0-9A-F]{2}|6005|6007|6008|6009|6F03|7070|70A8|7101|71FF|72FF|7201|3F00|C11F|C20F|5050)\\b",
+		"captures": {
+		  "0": { "name": "variable.parameter.chip8" }
+		}
+	  },
+	  {
+		"name": "support.function.chip8",
+		"match": "\\b(8[0-9A-F][0-9A-F][0-7E])\\b",
+		"captures": {
+		  "0": { "name": "support.function.chip8" }
+		}
+	  },
+	  {
+		"name": "keyword.operator.chip8",
+		"match": "\\b(9[0-9A-F][0-9A-F]0)\\b",
+		"captures": {
+		  "0": { "name": "keyword.operator.chip8" }
+		}
+	  },
+	  {
+		"name": "storage.modifier.chip8",
+		"match": "\\b(E[0-9A-F](9E|A1)|F[0-9A-F](07|0A|15|18|1E|29|33|55|65)|E0A1|FF07|FF15)\\b",
+		"captures": {
+		  "0": { "name": "storage.modifier.chip8" }
+		}
+	  },
+	  {
+		"name": "constant.other.chip8",
+		"match": "\\b(2050|2070|20A8)\\b",
+		"captures": {
+		  "0": { "name": "constant.other.chip8" }
+		}
+	  }
+	],
+
+
+	
+
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.8hc",
+					"match": "\\b(if|while|for|return)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.8hc",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.8hc",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.8hc",
+					"match": "//.*$"
+				}
+			]
+		}
+	},
+	"scopeName": "source.ch8"
+}

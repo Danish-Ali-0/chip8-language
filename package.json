@@ -1,0 +1,27 @@
+{
+  "name": "chip8-language",
+  "displayName": "Chip-8 Language",
+  "description": "Extension for Chip-8 Language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "chip8",
+      "aliases": ["Chip-8", "chip8"],
+      "extensions": [".ch8"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "chip8",
+      "scopeName": "source.chip8",
+      "path": "./syntaxes/chip8.tmLanguage.json"
+    }]
+  }
+}
+
+
