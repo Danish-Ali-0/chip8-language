@@ -1,10 +1,15 @@
 {
   "name": "chip8-language",
   "displayName": "Chip-8 Language",
+  "publisher": "dali300",
   "description": "Extension for Chip-8 Language",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.97.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Danish-Ali-0/chip8-language.git"
   },
   "categories": [
     "Programming Languages"

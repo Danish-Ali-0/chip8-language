@@ -81,39 +81,5 @@
 		  "0": { "name": "constant.other.chip8" }
 		}
 	  }
-	],
-
-
-	
-
-	"repository": {
-		"keywords": {
-			"patterns": [
-				{
-					"name": "keyword.control.8hc",
-					"match": "\\b(if|while|for|return)\\b"
-				}
-			]
-		},
-		"strings": {
-			"name": "string.quoted.double.8hc",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.8hc",
-					"match": "\\\\."
-				}
-			]
-		},
-		"comments": {
-			"patterns": [
-				{
-					"name": "comment.line.double-slash.8hc",
-					"match": "//.*$"
-				}
-			]
-		}
-	},
-	"scopeName": "source.ch8"
+	]
 }
